@@ -1,73 +1,44 @@
-# Welcome to your Lovable project
+# 🩹 Smart Wound-Care Concierge  
+**AI-driven wound monitoring with automated analysis, clinical summaries, and PDF reporting**
 
-## Project info
+Smart Wound-Care Concierge is an agentic AI assistant that analyzes wound images, tracks healing trends, classifies risk, and generates clinician-ready reports.  
+Built for **MumbaiHacks ’25**.
 
-**URL**: https://lovable.dev/projects/a70910d4-f9f8-4d69-add1-4675809a48c3
+---
 
-## How can I edit this code?
+## ⭐ Key Features
 
-There are several ways of editing your application.
+### 📷 1. Wound Image Analysis (Perception Layer)
+Using `perception.py`, the system extracts:
+- Wound area (px & %)
+- Redness score
+- Exudate ratio
+- Brightness & blur (quality control)
+- Optional wound mask
 
-**Use Lovable**
+### 🧠 2. Risk Classification (Decision Layer)
+`decision.py` assigns wound status using rule-based logic + trends:
+- **Stable**
+- **Monitor**
+- **Concerning**
+- **Urgent**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a70910d4-f9f8-4d69-add1-4675809a48c3) and start prompting.
+### 📄 3. Professional PDF Reports (Action Layer)
+`action.py` generates downloadable PDF reports using **ReportLab**, containing:
+- Wound image  
+- Metrics table  
+- Status explanation  
+- LLM-generated summary & instructions  
+- Timestamp + patient context  
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🕒 4. Healing Timeline & Records
+All analysis events are logged in SQLite:
+- Stored wound metrics  
+- Previous deltas  
+- Clinician notes  
+- Timeline visualization in the UI  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧩 Project Architecture
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a70910d4-f9f8-4d69-add1-4675809a48c3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
