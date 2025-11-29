@@ -18,10 +18,10 @@ Built for **MumbaiHacks '25**.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/smart-wound-care-concierge.git
+git clone https://github.com/SilverTech21/smart-wound-watch.git
 
 # 2. Navigate to the project directory
-cd smart-wound-care-concierge
+cd smart-wound-watch
 
 # 3. Install dependencies
 npm install
